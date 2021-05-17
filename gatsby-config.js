@@ -5,7 +5,7 @@ module.exports = {
   plugins: ["gatsby-plugin-gatsby-cloud",
             'gatsby-plugin-postcss',
             {
-              resolve: 'gatsby-source-filesystem',
+              resolve: 'gatsby-source-fileSystem',
               options: {
                 name: 'src',
                 path: `${__dirname}/src/`,
