@@ -6,9 +6,9 @@ import { Link, graphql } from 'gatsby';
 const IndexPage = ({ data }) => {
   console.log(data)
   return (
-    <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <img className='object-contain' alt="kids" src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60' />
+    <Layout pageTitle="THE HEADSTART HERALD">
+      <p className='text-center text-lg'>Hard-hitting articles of exeptional journalistic talent from the students of Headstart</p>
+      <img className='max-w-2xl mx-auto py-4' alt="kids" src='https://images.unsplash.com/photo-1453873623425-04e3561289aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1966&q=80' />
 
       <div>
         <h3>{data.allMarkdownRemark.totalCount} Posts:</h3>
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
               <Link to={node.fields.slug}>
                 <h4 className="text-xl font-bold">{node.frontmatter.title}</h4>
                 <h5 className="text-black text-opacity-40 text-sm">{node.frontmatter.date}</h5>
-                <p className="text-transparent bg-clip-text bg-gradient-to-br from-black to-gray-400">{node.excerpt}</p>
+                <p className="text-transparent bg-clip-text bg-gradient-to-b from-black to-gray-400">{node.excerpt}</p>
               </Link>
               </div>
             )

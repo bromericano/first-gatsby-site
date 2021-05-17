@@ -31,7 +31,7 @@ const Layout = ({ pageTitle, children }) => {
                         </li>
                     </ul>
                 </nav>
-                <h1>{pageTitle}</h1>
+                <h1 className="font-bold text-6xl text-center">{pageTitle}</h1>
                 {children}
             </div>
         </main>
