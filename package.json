@@ -28,5 +28,11 @@
     "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-kirkham": "^0.16.19"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "gatsby-plugin-postcss": "^4.5.0",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
   }
 }

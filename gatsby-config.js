@@ -3,12 +3,7 @@ module.exports = {
     title: "First Site",
   },
   plugins: ["gatsby-plugin-gatsby-cloud",
-            {
-              resolve: 'gatsby-plugin-typography',
-              options: {
-                pathToConfigModule: 'src/utils/typography',
-              },
-            },
+            'gatsby-plugin-postcss',
             {
               resolve: 'gatsby-source-filesystem',
               options: {
