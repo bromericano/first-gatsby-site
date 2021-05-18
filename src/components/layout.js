@@ -14,8 +14,8 @@ const Layout = ({ pageTitle, children }) => {
         `
     )
     return (
-        <main className="bg-gray-700">
-            <div className='container px-4 mx-auto max-w-4xl bg-gray-400'>
+        <main className="bg-gray-600">
+            <div className='container px-4 mx-auto max-w-4xl bg-gray-400 shadow-2xl'>
                 <title>{pageTitle}</title>
                 <nav>
                     <ul className="flex flex-wrap space-x-4">

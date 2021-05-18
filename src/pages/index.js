@@ -17,7 +17,8 @@ const IndexPage = ({ data }) => {
               <div key={node.id}>
               <Link to={node.fields.slug}>
                 <h4 className="text-xl font-bold">{node.frontmatter.title}</h4>
-                <h5 className="text-black text-opacity-40 text-sm">{node.frontmatter.date}</h5>
+                <h5 className="text-black text-opacity-40 text-sm float-right">{node.frontmatter.date}</h5>
+                <p>By {node.frontmatter.author}</p>
                 <p className="text-transparent bg-clip-text bg-gradient-to-b from-black to-gray-400">{node.excerpt}</p>
               </Link>
               </div>
@@ -38,6 +39,7 @@ export const query = graphql`
           frontmatter {
             date
             title
+            author
           }
           fields {
             slug

@@ -1,6 +1,8 @@
 ---
 title: "Kids Writing Stuff"
 date: "2021-05-15"
+author: "Eva"
+image: "../images/paper.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac ante quis lectus faucibus posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent iaculis, ligula vel facilisis convallis, leo libero tempor sapien, vitae pretium mi nisl id arcu. Etiam in purus convallis, ultrices neque ac, tincidunt tortor. Praesent mattis risus vitae iaculis aliquam. Ut posuere risus vitae dolor hendrerit volutpat. Nunc sed orci felis. Donec facilisis, elit ac ultricies vehicula, nisi quam cursus dui, id scelerisque ligula lacus et ligula. In in tristique mauris. Ut sem dui, ultricies sit amet cursus non, hendrerit sed nisl.
