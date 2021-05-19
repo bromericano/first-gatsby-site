@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  background-image: url(https://images.unsplash.com/photo-1554757387-fa0367573d09?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bm90ZWJvb2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+}
