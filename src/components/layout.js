@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Navbar, NavbarBrand } from 'reactstrap';
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(
@@ -14,25 +15,18 @@ const Layout = ({ pageTitle, children }) => {
         `
     )
     return (
-        <main className="bg-gray-600">
-            <div className='container px-4 mx-auto max-w-4xl bg-gray-400 shadow-2xl'>
+        <main>
+            <div className='bg-gradient-to-r from-green-400 to-blue-500'>
                 <title>{pageTitle}</title>
-                <nav>
-                    <ul className="flex flex-wrap space-x-4">
-                        <li>
-                            <Link to="/" className="font-semibold underline">
-                                Home
-                            </Link>
-                        </li>
-                        <li >
-                            <Link to="/about" className="font-semibold underline" >
-                                About
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-                <h1 className="font-bold text-6xl text-center">{pageTitle}</h1>
-                {children}
+                <div className="container shadow-lg p-0">
+                    <Navbar color='dark' dark className=''>
+                        <NavbarBrand href='/' className='mr-auto ml-4'>Headstart Herald</NavbarBrand>
+                    </Navbar>
+                    <div className='bg-gray-300'>
+                    <h1 className='text-center'>{pageTitle}</h1>
+                        {children}
+                    </div>
+                </div>
             </div>
         </main>
     )

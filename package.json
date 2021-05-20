@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
+    "bootstrap": "^5.0.1",
     "gatsby": "^3.4.1",
     "gatsby-plugin-emotion": "^6.5.0",
     "gatsby-plugin-gatsby-cloud": "^2.5.0",
@@ -29,6 +30,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-typography": "^0.16.20",
+    "reactstrap": "^8.9.0",
     "typography": "^0.16.21",
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-kirkham": "^0.16.19"

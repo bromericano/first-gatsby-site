@@ -9,13 +9,13 @@ export default function BlogPost({ data }) {
     return (
         <Layout>
             <div>
-                <h1 className="text-center text-xl font-bold">{post.frontmatter.title}</h1>
-                <div className='text-center'>
+                <h1>{post.frontmatter.title}</h1>
+                <div>
                     <GatsbyImage image={image} alt='paper' />
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <p className='text-right italic'>Written by {post.frontmatter.author}</p>
-                <p className='text-right text-sm opacity-50'>{post.frontmatter.date}</p>
+                <p>Written by {post.frontmatter.author}</p>
+                <p>{post.frontmatter.date}</p>
             </div>
         </Layout>
     )
