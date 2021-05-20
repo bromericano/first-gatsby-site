@@ -8,14 +8,14 @@ export default function BlogPost({ data }) {
         const image = getImage(post.frontmatter.image)
     return (
         <Layout>
-            <div>
-                <h1>{post.frontmatter.title}</h1>
-                <div>
+            <div className='p-4'>
+                <h1 className='text-center'>{post.frontmatter.title}</h1>
+                <div className='text-center'>
                     <GatsbyImage image={image} alt='paper' />
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <p>Written by {post.frontmatter.author}</p>
-                <p>{post.frontmatter.date}</p>
+                <p className='text-right'>Written by {post.frontmatter.author}</p>
+                <p className='text-right'>{post.frontmatter.date}</p>
             </div>
         </Layout>
     )

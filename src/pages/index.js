@@ -12,7 +12,9 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 const IndexPage = ({ data }) => {
   console.log(data)
   return (
-    <Layout pageTitle="THE HEADSTART HERALD">
+    <Layout>
+    <div>
+    <h1 className='text-center'>The Headstart Herald</h1>
       <p className='text-center'>Hard-hitting articles of exeptional journalistic talent from the students of Headstart</p>
       <div className='text-center'>
         <StaticImage src="../images/main.jpg" placeholder='blurred' alt='main' />
@@ -40,6 +42,7 @@ const IndexPage = ({ data }) => {
           })
           }
       </div>
+    </div>
     </Layout>
   )
 }
