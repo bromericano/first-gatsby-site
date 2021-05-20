@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  background-image: url(https://images.unsplash.com/photo-1554757387-fa0367573d09?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bm90ZWJvb2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60);
+body {
+  background-color: #d1d1d5;
+  opacity: 1;
+  background-image: radial-gradient(#25a597 2px, transparent 2px),
+    radial-gradient(#25a597 2px, #d1d1d5 2px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
 }
