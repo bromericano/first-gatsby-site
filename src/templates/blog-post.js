@@ -8,7 +8,7 @@ export default function BlogPost({ data }) {
         const image = getImage(post.frontmatter.image)
     return (
         <Layout>
-            <div className='p-4'>
+            <div className='p-4 bg-white'>
                 <h1 className='text-center'>{post.frontmatter.title}</h1>
                 <div className='text-center'>
                     <GatsbyImage image={image} alt='paper' />
@@ -38,4 +38,7 @@ export const query = graphql`
             }
         }
 `
+
+
+
 

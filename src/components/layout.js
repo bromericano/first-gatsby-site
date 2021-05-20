@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Layout = ({ pageTitle, children }) => {
     const data = useStaticQuery(
@@ -16,12 +17,14 @@ const Layout = ({ pageTitle, children }) => {
     )
     return (
         <main>
+        <div className='text-center my-5'>
+            <Link to='/'>
+                <StaticImage  src="../images/logoSample3.svg" placeholder='blurred' alt='logo' />
+            </Link>
+        </div>
             <div className='opacity-1'>
                 <title>{pageTitle}</title>
                 <div className="container p-0">
-                    <Navbar color='dark' dark className='mb-4 shadow-lg'>
-                        <NavbarBrand href='/' className='mr-auto ml-4'>Headstart Herald</NavbarBrand>
-                    </Navbar>
                     <div className=''>
                         {children}
                     </div>
