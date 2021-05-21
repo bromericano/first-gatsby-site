@@ -23,9 +23,9 @@ const IndexPage = ({ data }) => {
                       <Card className='hover:bg-blue-300' style={{ border: 'transparent' }}>
                         <CardImg className='h-full' src={node.frontmatter.image.publicURL} alt='image' />
                         <CardImgOverlay className='p-0'>
-                        <div className='bg-gray-900 bg-opacity-10 pb-2 px-2 text-black' style={{ position: 'absolute', bottom: 0 }}>
+                        <div className='bg-gray-300 bg-opacity-40 pb-2 px-2 text-black' style={{ position: 'absolute', bottom: 0 }}>
                           <CardTitle tag="h5">{node.frontmatter.title}</CardTitle>
-                          <CardSubtitle tag="h6" className="mb-2 text-gray-700">{node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
+                          <CardSubtitle tag="h6" className="mb-2 text-gray-700">Written by {node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
                           <CardText>{node.excerpt}</CardText>
                         </div>
                         </CardImgOverlay>
@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
                         <CardBody>
                           <CardTitle tag="h6">{node.frontmatter.title}</CardTitle>
                           <CardSubtitle tag="h7" className="mb-2 text-gray-700">{node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
-                          <CardText className="text-black">{node.excerpt.substr(0,100)}</CardText>
+                          <CardText className="text-black">{node.excerpt.substr(0,200)}</CardText>
                         </CardBody>
                       </Card>
                     </div>
