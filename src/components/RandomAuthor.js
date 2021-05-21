@@ -32,7 +32,7 @@ export default function RandomAuthor() {
 
     const [randomAuthor, setRandomAuthor] = useState(authors[Math.floor(Math.random() * authors.length)]);
     return (
-        <div>
+        <div className='spotlight h-full'>
             {randomAuthor.name}
             {randomAuthor.birthday}
             {randomAuthor.bio}
