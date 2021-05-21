@@ -14,10 +14,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
     <div>
-      <div className='grid grid-cols-3 auto-rows-fr gap-1'>
+      <div className='grid grid-cols-1 auto-rows-min gap-1 lg:grid-cols-3 bg-gray-800'>
           {data.allMarkdownRemark.edges.map(({ node }, index) => {
             if(index === 0) {
-              return (<div key={node.id} className='order-1 col-start-1 col-end-3 row-start-1 row-end-2'>
+              return (<div key={node.id} className='order-first lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2'>
                   <Link className='no-underline' to={node.fields.slug}>
                     <div className=''>
                       <Card className='hover:bg-blue-300' style={{ border: 'transparent' }}>
@@ -33,13 +33,13 @@ const IndexPage = ({ data }) => {
                     </div>
                   </Link>
               </div>)
-            } else {
+            } else if(index === 1 || index === 2 || index === 3) {
             return (
-              <div key={node.id}>
+              <div className='h-1/2' key={node.id}>
                   <Link className='no-underline' to={node.fields.slug}>
                     <div className=''>
                       <Card className='hover:bg-blue-300 text-black' style={{ border: 'transparent' }}>
-                        <GatsbyImage image={getImage(node.frontmatter.image)} alt='image' />
+                        <GatsbyImage className='hidden lg:block' image={getImage(node.frontmatter.image)} alt='image' />
                         <CardBody>
                           <CardTitle tag="h6">{node.frontmatter.title}</CardTitle>
                           <CardSubtitle tag="h7" className="mb-2 text-gray-700">{node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
@@ -49,10 +49,24 @@ const IndexPage = ({ data }) => {
                     </div>
                   </Link>
               </div>
-            )}
+            )} else {
+              return (<div className='lg:col-start-1 lg:col-end-4' key={node.id}>
+                  <Link className='no-underline' to={node.fields.slug}>
+                    <div className=''>
+                      <Card className='hover:bg-blue-300 text-black' style={{ border: 'transparent' }}>
+                        <CardBody>
+                          <CardTitle tag="h6">{node.frontmatter.title}</CardTitle>
+                          <CardSubtitle tag="h7" className="mb-2 text-gray-700">{node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
+                          <CardText className="text-black">{node.excerpt.substr(0,100)}</CardText>
+                        </CardBody>
+                      </Card>
+                    </div>
+                  </Link>
+              </div>)
+            }
           })
           }
-          <div className='col-start-3 row-start-1'>
+          <div className='lg:col-start-3 lg:row-start-1 bg-white'>
             Hey!
           </div>
       </div>
