@@ -5,8 +5,7 @@ import Layout from '../components/layout';
 import { Link, graphql } from 'gatsby';
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImgOverlay, CardImg } from 'reactstrap';
-
-
+import RandomAuthor from '../components/RandomAuthor';
 
 // Step 2: Define your component
 const IndexPage = ({ data }) => {
@@ -67,7 +66,7 @@ const IndexPage = ({ data }) => {
           })
           }
           <div className='lg:col-start-3 lg:row-start-1 bg-white'>
-            Hey!
+            <RandomAuthor />
           </div>
       </div>
       <div className='text-center'>
