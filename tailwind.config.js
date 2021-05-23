@@ -2,10 +2,16 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'spotlight': "url('../images/headshot1.jpg')",
+      })
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover',]
+    },
   },
   plugins: [],
 }

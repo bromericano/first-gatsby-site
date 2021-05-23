@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
         <main>
         <div className='text-center my-5'>
             <Link to='/'>
-                <StaticImage  src="../images/logoSample3.svg" placeholder='blurred' alt='logo' />
+                <StaticImage  src="../images/logoSample3.svg" placeholder='blurred' alt='logo' className='bg-white' />
             </Link>
         </div>
             <div className='opacity-1'>
