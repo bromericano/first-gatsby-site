@@ -17,11 +17,16 @@ const Layout = ({ pageTitle, children }) => {
     )
     return (
         <main>
-        <div className='text-center my-5'>
-            <Link to='/'>
-                <StaticImage  src="../images/logoSample3.svg" placeholder='blurred' alt='logo' className='bg-white' />
-            </Link>
-        </div>
+        <nav className='my-5 flex'>
+            <div className=''>
+                <Link to='/' className=''>
+                    <StaticImage  src="../images/logoSample3.svg" placeholder='blurred' alt='logo' className='bg-white' />
+                </Link>
+            </div>
+            <div className='ml-auto text-center justify-center my-auto'  style={{ lineHeight: '100%' }}>
+                <span className='self-center'>Home</span>
+            </div>
+        </nav>
             <div className='opacity-1'>
                 <title>{pageTitle}</title>
                 <div className="container p-0">
