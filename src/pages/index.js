@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
                         <div className='w-2/4 mx-auto text-white' style={{ position: 'absolute', bottom: '20%', left: '10%' }}>
                           <CardTitle tag="h5">{node.frontmatter.title}</CardTitle>
                           <CardSubtitle tag="h6" className="mb-2">Written by {node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
-                          <CardText>{node.excerpt}</CardText>
+                          <CardText className='hidden md:inline'>{node.excerpt}</CardText>
                           <ButtonToggle>Read here</ButtonToggle>
                         </div>
                         </Link>
