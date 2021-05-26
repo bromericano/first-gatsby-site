@@ -50,30 +50,12 @@ const IndexPage = ({ data }) => {
                     </div>
                   </Link>
               </div>
-            )} 
-            {/* else {
-              return (<div className='lg:col-start-1 lg:col-end-4  hover:opacity-75' key={node.id}>
-                  <Link className='no-underline' to={node.fields.slug}>
-                    <div className=''>
-                      <Card className='text-black' style={{ border: 'transparent' }}>
-                        <CardBody>
-                          <CardTitle tag="h5">{node.frontmatter.title}</CardTitle>
-                          <CardSubtitle tag="h6" className="mb-2 text-gray-700">{node.frontmatter.author} <span className='float-right'>{node.frontmatter.date}</span></CardSubtitle>
-                          <CardText className="text-black">{node.excerpt.substr(0,200)}</CardText>
-                        </CardBody>
-                      </Card>
-                    </div>
-                  </Link>
-              </div>)
-            } */}
+            )}
           })
           }
           <div className='order-2 col-start-1 col-end-4 mx-3 border-l-8 border-gray-700 mb-4'>
             Recent Articles:
           </div>
-          {/* <div className='lg:col-start-3 lg:row-start-1'>
-            <RandomAuthor />
-          </div> */}
       </div>
     </div>
     </Layout>
