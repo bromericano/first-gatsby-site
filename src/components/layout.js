@@ -23,9 +23,6 @@ const Layout = ({ pageTitle, children }) => {
                         <NavItem>
                             <NavLink href="/about">About</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink href="/authors">Authors</NavLink>
-                        </NavItem>
                     </Nav>
                     </Collapse>
                 </Navbar>
