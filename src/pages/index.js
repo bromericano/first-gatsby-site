@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardImgOverlay, CardImg, ButtonToggle } from 'reactstrap';
-import RandomAuthor from '../components/RandomAuthor';
 
 // Step 2: Define your component
 const IndexPage = ({ data }) => {
@@ -13,8 +12,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
     <div className='shadow-lg'>
+    {/* div containing all of the blog posts, including the featured cover article */}
+    {/* div is using CSS grid, 3 columns per row */}
       <div className='grid grid-cols-1 auto-rows-auto lg:grid-cols-3 lg:gap-6'>
+      {/* Map over the array of markdown files (the articles) */}
           {data.allMarkdownRemark.edges.map(({ node }, index) => {
+            {/* If it is most recent article, display it in the large features section of the home page */}
             if(index === 0) {
               return (<div key={node.id} className='order-first col-start-1 col-end-2 lg:col-start-1 lg:col-end-4 mb-6'>
                     <div className=''>
@@ -33,6 +36,7 @@ const IndexPage = ({ data }) => {
                       </Card>
                     </div>
               </div>)
+              {/* For the rest of the articles, put one in each column per row */}
             } else {
             return (
               <div className='h-1/2 hover:opacity-75 w-11/12 mx-auto order-last col-start-1 col-end-2 lg:col-span-1' key={node.id}>
@@ -53,6 +57,7 @@ const IndexPage = ({ data }) => {
             )}
           })
           }
+          {/* Added order-2 class to put this div after the featured article and before the rest of the articles */}
           <div className='order-2 col-start-1 col-end-4 mx-3 border-l-8 border-gray-700 mb-4'>
             Recent Articles:
           </div>

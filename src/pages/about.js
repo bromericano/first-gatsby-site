@@ -12,8 +12,8 @@ const AboutPage = ({ data }) => {
     <Layout pageTitle="About">
       <div className='text-center'>
         <h1>WHO WE ARE</h1>
-        <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
       </div>
+      {/* 2 columns when screen size is medium or larger, 1 column when smaller */}
       <div className='grid grid-cols-1 md:grid-cols-2 auto-rows-fr container md:gap-20 mt-10'>
         <div className=''>
           <img className='mx-auto' alt='img' src='https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60' />
@@ -31,7 +31,10 @@ const AboutPage = ({ data }) => {
       <div className='text-center my-10 font-bold text-4xl'>
         Meet the Team!
       </div>
+      {/* container using CSS grid with 3 columns per row, 1 column when screen size is smaller than medium */}
       <div className='container grid grid-cols-1 md:grid-cols-3 gap-4 mt-10'>
+      {/* map over authors array that contains objects with all authors' information */}
+      {/* Creates a car for each author that takes up 1 column of the grid */}
         {authors.map((author) => {
           return (<div key={author.name}>
             <Card inverse>
